@@ -23,4 +23,4 @@ De colors used by the NS website
 - **NS One & Two**: NS One contains 179 functional icons for wagon indications, signage applications such as P+R, WC, bicycle shed, etc. NS Two contains 89 partner logos such as Hermes, Veolia and DB.
 - **NS Swift**: Frutiger and Swift 2.0 are used for printing. This is a serif font.
 
-**link**: https://www.stoerebinken.nl/en/work/ns-fonts-management/
+Fonts found on the network but still need to add it to the git ignore

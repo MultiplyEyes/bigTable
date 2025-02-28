@@ -6,14 +6,14 @@ De colors used by the NS website
 
 ### background color
 
-**White**: #ffffff
-**White-shadow**: #fcfcfc
-**Yellow** : #ffc917
+**White**: #ffffff<br>
+**White-shadow**: #fcfcfc<br>
+**Yellow** : #ffc917<br>
 
 ### Text color
 
-**Dark blue**: #003082
-**Blue**: #0068D4
+**Dark blue**: #003082<br>
+**Blue**: #0068D4<br>
 
 - **NS Sans** – Regular (400) & DemiBold (600): At the office workplace (personal computer and printer), every NS employee has two NS house style fonts: ‘NS Sans’ and ‘NS Swift’. NS Sans is also used for other digital applications, such as web, mobile devices, screens, information screens at stations or in the train.
 - **NS Sign**: NS Sign is a font with extra space between the letters. This improves the readability of texts at great distances. This font is used for moving information carriers or for signage of stations and NS buildings, public information signs, lettering of trains and company cars.

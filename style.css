@@ -38,7 +38,7 @@ form fieldset:nth-of-type(2):has(#checkkers:checked) fieldset:nth-of-type(2){
     display: none;
 } */
 
-form fieldset:nth-of-type(2):has(#disable1C:checked) {
+form fieldset:has(#disable1C:checked) {
     label{
         display: none;
     }
@@ -47,4 +47,8 @@ form fieldset:nth-of-type(2):has(#disable1C:checked) {
         display: none;
     }
     
+}
+
+progress{
+    width: 100%;
 }

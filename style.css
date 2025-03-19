@@ -95,11 +95,6 @@ input.invisable{
     --chs: true;
 } */
 
-html:has([value="checkes"]:not(:checked)) .invisable{
-    display: none;
-}
-
-
 
 
 input[type=radio]{
@@ -145,9 +140,15 @@ fieldset{
     border-radius: 5px;
     padding: 5px;
 
+    margin-top: 10px;
+
     & > label{
         max-width: 70%;
     }
+}
+
+html:has([value="checkes"]:not(:checked)) .invisable{
+    display: none;
 }
 
 #logo{
@@ -195,7 +196,29 @@ fieldset{
 
     background-color: var(--NS-Button);
 }
+@property --h {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value:0;
+}
 
+@keyframes load{
+    0%{
+        --h: 0%;
+    }
+    25%{
+        --h: 25%;
+    }
+    50%{
+        --h: 50%;
+    }
+    75%{
+        --h: 75%;
+    }
+    100%{
+        --h: 100%;
+    }
+}
 
 #progress-circle::before{
     content: "";
@@ -215,19 +238,4 @@ fieldset{
     animation: load 4s infinite;
 
     background: linear-gradient(90deg, var(--NS--Yellow) var(--h), rgba(255,255,255,1) var(--h));
-}
-
-@property --h {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value:0;
-}
-
-@keyframes load{
-    0%{
-        --h: 0%;
-    }
-    100%{
-        --h: 100%;
-    }
 }

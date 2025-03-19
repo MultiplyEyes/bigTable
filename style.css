@@ -112,6 +112,7 @@ input[type=radio]{
 }
 
 input[type="submit"]{
+    background-color: #004BA0;
     background-color: var(--NS-Button);
     border: none;
     border-radius: 4px;
@@ -153,38 +154,41 @@ fieldset{
     }
 }
 
-#logo, #progress-circle{
+#logo{
     max-height:  var(--NS-bar-itmes);
     max-width:  var(--NS-bar-itmes);
 }
 
 
 #progress-circle{
-    background-color: var(--NS--Yellow);
+    max-height:  calc(var(--NS-bar-itmes) * 0.5);
+    max-width:  calc(var(--NS-bar-itmes) * 2);
+
+    background-color: var(--NS-Text);
+
     height: 100%;
     width: 100%;
 
-    border-radius: 50%;
-
-    min-width: var(--NS-bar-itmes);
-    min-height: var(--NS-bar-itmes);
+    border-radius: 10px;
 
     display: grid;
     align-items: center;
     justify-content: center;
 
     animation: load 4s infinite;
+
+    box-shadow: none;
+
+    margin: auto;
 }
 
 #progress-circle::after{
-    transition: 1s;
-
     content: "";
     display: block;
-    border-radius: 50%;
+    border-radius: 10px;
     
-    height: 80%;
-    width: calc(var(--NS-bar-itmes) * 0.8);
+    height: 50%;
+    width: calc(var(--NS-bar-itmes) * 1.8);
     /* background-color: var(--NS-Button); */
     margin: auto;
 
@@ -193,82 +197,41 @@ fieldset{
 
     z-index: 1;
 
-     background-image: 
-        linear-gradient(270deg, var(--NS-Button) 50%, transparent 0),
-        linear-gradient(0deg, var(--NS-Button) 50%, transparent 0),
-        linear-gradient(90deg, var(--NS-Button) 50%, transparent 0),
-        linear-gradient(180deg, var(--NS-Button) 50%, transparent 0);
-    ;
-
-
-    @container style(--stageOne:true){
-        background-image: 
-            linear-gradient(270deg, var(--NS-Button) 50%, transparent 0),
-            linear-gradient(0deg, var(--NS-Text) 50%, transparent 0),
-            linear-gradient(90deg, var(--NS-Button) 50%, transparent 0),
-            linear-gradient(180deg, var(--NS-Button) 50%, transparent 0);
-        ;
-    }
-
-    @container style(--stageTwo:true){
-        background-image: 
-            linear-gradient(270deg, var(--NS-Button) 50%, transparent 0),
-            linear-gradient(90deg, var(--NS-Text) 50%, transparent 0),
-            linear-gradient(90deg, var(--NS-Button) 50%, transparent 0),
-            linear-gradient(180deg, var(--NS-Button) 50%, transparent 0);
-        ;
-    }
-
-    @container style(--stageThree:true){
-        background-image: 
-            linear-gradient(90deg, var(--NS-Text) 50%, transparent 0),
-            linear-gradient(0deg, var(--NS-Button) 50%, transparent 0),
-            linear-gradient(90deg, var(--NS-Text) 50%, transparent 0),
-            linear-gradient(180deg, var(--NS-Text) 50%, transparent 0)
-            ;
-    }
-
-    @container style(--stageFour:true){
-        background-image: 
-            linear-gradient(90deg, var(--NS-Text) 50%, transparent 0),
-            linear-gradient(90deg, var(--NS-Text) 50%, transparent 0),
-            linear-gradient(90deg, var(--NS-Text) 50%, transparent 0),
-            linear-gradient(180deg, var(--NS-Text) 50%, transparent 0)
-        ;
-    }
-
-   
+    background-color: var(--NS-Button);
 }
 
 
 #progress-circle::before{
     content: "";
     display: block;
-    border-radius: 50%;
+    border-radius: 10px;
     
-    height: 60%;
-    width: calc(var(--NS-bar-itmes) * 0.6);
-    background-color: var(--NS--Yellow);
+    height: 20%;
+    width: calc(var(--NS-bar-itmes) * 1.6);
+    /* background-color: var(--NS--Yellow); */
     margin: auto;
 
     grid-column-start: 1;
     grid-row-start: 1;
 
     z-index: 2;
+
+    animation: load 4s infinite;
+
+    background: linear-gradient(90deg, var(--NS--Yellow) var(--h), rgba(255,255,255,1) var(--h));
 }
 
-@keyframes load {
-    25%{
-        --stageOne:true
-    }
-    50%{
-        --stageTwo:true
-    }
-    75%{
-        --stageThree:true
+@property --h {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value:0;
+}
+
+@keyframes load{
+    0%{
+        --h: 0%;
     }
     100%{
-        --stageFour:true
+        --h: 100%;
     }
-    
 }

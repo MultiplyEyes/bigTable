@@ -103,12 +103,11 @@ input[type=radio]{
 }
 
 input[type="submit"]{
-    background-color: #004BA0;
     background-color: var(--NS-Button);
     border: none;
     border-radius: 4px;
     box-shadow: inset 0 -.125rem 0 var(--NS-Button);
-    color: #fff;
+    color: var(--NS--BG);
     display: block;
     font-size: 1rem;
     font-weight: 400;
@@ -197,26 +196,17 @@ html:has([value="checkes"]:not(:checked)) .invisable{
     background-color: var(--NS-Button);
 }
 @property --h {
-    syntax: '<percentage>';
+    syntax: '<number>';
     inherits: false;
     initial-value:0;
 }
 
 @keyframes load{
     0%{
-        --h: 0%;
-    }
-    25%{
-        --h: 25%;
-    }
-    50%{
-        --h: 50%;
-    }
-    75%{
-        --h: 75%;
+        --h: 0;
     }
     100%{
-        --h: 100%;
+        --h: 1;
     }
 }
 
@@ -235,7 +225,19 @@ html:has([value="checkes"]:not(:checked)) .invisable{
 
     z-index: 2;
 
-    animation: load 4s infinite;
+    animation: load 4s infinite linear;
 
-    background: linear-gradient(90deg, var(--NS--Yellow) var(--h), rgba(255,255,255,1) var(--h));
+    background: linear-gradient(90deg, var(--NS--Yellow) calc(100% * var(--h)), rgba(255,255,255,1) calc(100% * var(--h)));
+}
+
+input[type="text"], input[type="number"]{
+    height: 1.5625rem;
+    border-radius: .25rem;
+    background-color: transparent;
+    border-left-width: .0625rem;
+    box-shadow: 0 0 #fff;
+    transition: all .2s cubic-bezier(.7,.27,.27,1), padding-left 0s;
+    color: #003082;
+    text-overflow: ellipsis;
+    text-align: center;
 }

@@ -24,6 +24,7 @@ function bigInput(e){
 bigNum.addEventListener('input', bigInput);
 bigNum.addEventListener('input', calc);
 
+
 function calc(){
     finalResult = smallResult / bigResult;
     finalResult = finalResult * 100;
@@ -33,6 +34,8 @@ function calc(){
         result.value = finalResult;
     }
 }
+
+
 
 // now reverse the
 // result.addEventListener('input', reverseCalc);

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script type="module" src="main.js"></script>
-    <title>Document</title>
+    <title>NS form</title>
 </head>
 <body>
     <header>
@@ -13,8 +13,7 @@
         <h1>
             Dit is een studenten website en geen officiële website van de gemeente
         </h1>
-        <div id="progress-circle">
-
+        <!-- <div id="progress-circle"> -->
         </div>
     </header>
     
@@ -33,13 +32,13 @@
             <fieldset>
                 <h3>Question 1</h3>
                 <label for="">Voorletter(s)*</label>
-                <input type="text" required> 
+                <input type="text" required value="Voorletter"> 
                 <label for="">Tussen-voegsel(s)</label>
-                <input type="text">
+                <input type="text" value="Tussen-voegsel">
                 <label for="">Achternaam*</label>
-                <input type="text" required>
+                <input type="text" required value="Achternaam">
                 <label for="">Burgerservicenummer overledene*</label>
-                <input type="text" required>
+                <input type="text" required value="Burgerservicenummer">
                 <label for="">Overlijdensdatum*</label>
                 <input type="date" required>
                 <input type="submit" value="submit" class="submit">
@@ -64,20 +63,28 @@
                  <section class="clean-section">
                     <label for="">Was de overledene getrouwd of geregisteerd partner huwelijkse of parnerschaps-voorwaarden later vastleggen in een notariele akte?*</label>
                     <section>
-                        <input type="radio" name="1" value="checkes" required>
-                        <label for="">ja</label>
-                        <input type="radio" name="1" id="add-80" required>
-                        <label for="">nee.</label>
+                        <section class="radio">
+                            <input type="radio" name="1" value="checkes">
+                            <label for="" >ja</label>
+                        </section>
+                        <section class="radio">
+                            <input type="radio" name="1" id="add-50">
+                            <label for=""  >nee.</label>
+                        </section>
                     </section>
                  </section>
                 <!-- part 2 -->
                 <section class="clean-section invisable">
                     <label for="" class="invisable">Was de overledene getrouwd of geregisteerd partner huwelijkse of parnerschaps-voorwaarden later vastleggen in een notariele akte?</label>
                     <section>
-                        <input type="radio" class="invisable" name="2">
-                        <label for="" class="invisable">ja</label>
-                        <input type="radio" class="invisable" name="2" id="add-50">
-                        <label for="" class="invisable"  >nee.</label>
+                        <section class="radio">
+                            <input type="radio" class="invisable" name="2">
+                            <label for="" class="invisable">ja</label>
+                        </section>
+                        <section class="radio">
+                            <input type="radio" class="invisable" name="2" id="add-50">
+                            <label for="" class="invisable"  >nee.</label>
+                        </section>
                     </section>
                 </section>
 
@@ -91,9 +98,9 @@
                 <h3>Question 3</h3>
                 <label for="">Breuk</label>
                 <label for="">Small</label>
-                <input type="number" id="smallNumber">
+                <input type="number" id="smallNumber" value="1">
                 <label for="">Large</label>
-                <input type="number" id="bigNumber">
+                <input type="number" id="bigNumber" value="100">
                 <label for="">procent</label>
                 <input type="number" id="result">
                 <input type="submit" value="submit" class="submit">

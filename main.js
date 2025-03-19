@@ -34,12 +34,3 @@ function calc(){
         result.value = finalResult;
     }
 }
-
-
-
-// now reverse the
-// result.addEventListener('input', reverseCalc);
-
-// function reverseCalc(){
-
-// }

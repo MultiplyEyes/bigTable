@@ -34,7 +34,7 @@ function calc(){
     }
 }
 
-// now reverse the calc
+// now reverse the
 // result.addEventListener('input', reverseCalc);
 
 // function reverseCalc(){

@@ -3,6 +3,7 @@
     --NS--BG: #e6e6e6;
     --NS-Text: #003082;
     --NS-Button: #0063D3;
+    --NS-bar-itmes: 7.5625rem;
 }
 
 *{
@@ -30,10 +31,7 @@ header{
     box-shadow: 0 .125rem 0 0 rgba(7, 7, 33, .15);
 }
 
-#logo{
-    max-height:  7.5625rem;
-    max-width:  7.5625rem;;
-}
+
 
 #down{
     max-height:  7.5625rem;
@@ -136,4 +134,141 @@ input[type="submit"]{
 
 input[type="submit"]:hover{
     background-color: #004BA0;
+}
+
+fieldset{
+    border-style: none;
+}
+
+.clean-section{
+    display: flex;
+
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 5px;
+
+    & > label{
+        max-width: 70%;
+    }
+}
+
+#logo, #progress-circle{
+    max-height:  var(--NS-bar-itmes);
+    max-width:  var(--NS-bar-itmes);
+}
+
+
+#progress-circle{
+    background-color: var(--NS--Yellow);
+    height: 100%;
+    width: 100%;
+
+    border-radius: 50%;
+
+    min-width: var(--NS-bar-itmes);
+    min-height: var(--NS-bar-itmes);
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    animation: load 4s infinite;
+}
+
+#progress-circle::after{
+    transition: 1s;
+
+    content: "";
+    display: block;
+    border-radius: 50%;
+    
+    height: 80%;
+    width: calc(var(--NS-bar-itmes) * 0.8);
+    /* background-color: var(--NS-Button); */
+    margin: auto;
+
+    grid-column-start: 1;
+    grid-row-start: 1;
+
+    z-index: 1;
+
+     background-image: 
+        linear-gradient(270deg, var(--NS-Button) 50%, transparent 0),
+        linear-gradient(0deg, var(--NS-Button) 50%, transparent 0),
+        linear-gradient(90deg, var(--NS-Button) 50%, transparent 0),
+        linear-gradient(180deg, var(--NS-Button) 50%, transparent 0);
+    ;
+
+
+    @container style(--stageOne:true){
+        background-image: 
+            linear-gradient(270deg, var(--NS-Button) 50%, transparent 0),
+            linear-gradient(0deg, var(--NS-Text) 50%, transparent 0),
+            linear-gradient(90deg, var(--NS-Button) 50%, transparent 0),
+            linear-gradient(180deg, var(--NS-Button) 50%, transparent 0);
+        ;
+    }
+
+    @container style(--stageTwo:true){
+        background-image: 
+            linear-gradient(270deg, var(--NS-Button) 50%, transparent 0),
+            linear-gradient(90deg, var(--NS-Text) 50%, transparent 0),
+            linear-gradient(90deg, var(--NS-Button) 50%, transparent 0),
+            linear-gradient(180deg, var(--NS-Button) 50%, transparent 0);
+        ;
+    }
+
+    @container style(--stageThree:true){
+        background-image: 
+            linear-gradient(90deg, var(--NS-Text) 50%, transparent 0),
+            linear-gradient(0deg, var(--NS-Button) 50%, transparent 0),
+            linear-gradient(90deg, var(--NS-Text) 50%, transparent 0),
+            linear-gradient(180deg, var(--NS-Text) 50%, transparent 0)
+            ;
+    }
+
+    @container style(--stageFour:true){
+        background-image: 
+            linear-gradient(90deg, var(--NS-Text) 50%, transparent 0),
+            linear-gradient(90deg, var(--NS-Text) 50%, transparent 0),
+            linear-gradient(90deg, var(--NS-Text) 50%, transparent 0),
+            linear-gradient(180deg, var(--NS-Text) 50%, transparent 0)
+        ;
+    }
+
+   
+}
+
+
+#progress-circle::before{
+    content: "";
+    display: block;
+    border-radius: 50%;
+    
+    height: 60%;
+    width: calc(var(--NS-bar-itmes) * 0.6);
+    background-color: var(--NS--Yellow);
+    margin: auto;
+
+    grid-column-start: 1;
+    grid-row-start: 1;
+
+    z-index: 2;
+}
+
+@keyframes load {
+    25%{
+        --stageOne:true
+    }
+    50%{
+        --stageTwo:true
+    }
+    75%{
+        --stageThree:true
+    }
+    100%{
+        --stageFour:true
+    }
+    
 }

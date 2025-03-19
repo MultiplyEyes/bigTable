@@ -84,31 +84,29 @@ h3{
     text-align: center;
 }
 
-.invisable{
-    display: none;
+label.invisable{
+    display: block;
 }
 
-.bombs{
-    display: none;
+input.invisable{
+    display:initial;
 }
 
-html:has([value="checkes"]:checked){
+
+/* html:has([value="checkes"]:checked){
     --chs: true;
+} */
+
+html:has([value="checkes"]:not(:checked)) .invisable{
+    display: none;
 }
+
+
+
 
 input[type=radio]{
     margin-top: 10px;
     margin-bottom: 0;
-}
-
-@container style(--chs:true){
-    label.invisable{
-        display: block;
-    }
-
-    input.invisable{
-        display:initial;
-    }
 }
 
 input[type="submit"]{

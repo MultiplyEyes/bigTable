@@ -236,7 +236,7 @@ html:has([value="checkes"]:not(:checked)) .invisable{
     background: linear-gradient(90deg, var(--NS--Yellow) calc(100% * var(--h)), rgba(255,255,255,1) calc(100% * var(--h)));
 }
 
-input[type="text"], input[type="number"]{
+input[type="text"], input[type="number"], input[type="date"]{
     height: 1.5625rem;
     border-radius: .25rem;
     background-color: transparent;
@@ -246,4 +246,6 @@ input[type="text"], input[type="number"]{
     color: #003082;
     text-overflow: ellipsis;
     text-align: center;
+
+    min-width: 100%;
 }

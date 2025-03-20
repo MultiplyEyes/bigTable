@@ -85,3 +85,14 @@ I also gotten feedback from Jemery Keith. He told me that i need to change the w
 
 Today I tried adding an progress bar. I had an hard time with this. I tried to use the progress Atribute first but couldn't make it work properly. So i tried to do it in CSS all instead. And ended up with this.
 
+![alt text](image-1.png)
+
+But deleted it since it actualy would go against the design principles I learned recently.
+
+After that i worked on making evering else be functional on the an old phone.
+
+And changed the design of the entire website to make it look more like the NS website. after some feedback.
+
+![alt text](image-2.png)
+
+This is the final design of the website.

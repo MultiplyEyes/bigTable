@@ -67,3 +67,21 @@ During the day i also made the website multiple pages and fixed bugs with this i
 
 ### Wednesday march 12
 
+Today i changed the css of the website to make it look more like the NS website. I also added the NS logo to the website. and the NS button.
+
+![alt text](image.png)
+
+And i started to implement questions 1.B partialy. I mainly added an function to remove the rest of the questions when the user selects an specific option.
+
+I also started to add the percentage question from 4.D. No function yet but i added the input.
+
+### Thursday march 13
+
+Today i added the function to the percentage question. So that it can calculate the percentage from your input.
+
+I also gotten feedback from Jemery Keith. He told me that i need to change the way i use Display none or else user on an older device will not be able to see the questions. I will change this next week.
+
+### Wednesday march 19
+
+Today I tried adding an progress bar. I had an hard time with this. I tried to use the progress Atribute first but couldn't make it work properly. So i tried to do it in CSS all instead. And ended up with this.
+

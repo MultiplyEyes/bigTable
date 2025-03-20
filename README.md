@@ -29,38 +29,41 @@ Fonts found on the network but still need to add it to the git ignore
 
 ## progress
 
-### wednesday
+### wednesday march 5th
 
 So this went to learning the basic of forms and undestanding the question. I am gonno be honest I had an hard time focusing on this project. it seams my new medication is making it more difficult.
 
 While listening to the presentation while trying to fiure it out on my own. I created an basic website with the forms and recreated the questions from 1.a. As the first questions to take inspiration.
 
-![alt text](image.png)
+![alt text](Img/image.png)
 
-![alt text](image-1.png)
+![alt text](Img/image-1.png)
 
 This day was also an day of me messing around with form and trying to figure it out as much as possible while trying to make the css.
 
-### Thurseday
+### Thurseday march 6th
 
 Working more on the questions, i finaly understood we only need to do questions that are interresting.
 
-![alt text](image-2.png)
+![alt text](Img/image-2.png)
 
 Questions 1.A as an beginner question and an start for me to work on sounded perfect beginner test for now.
 
 Question 1.B with an function to ignore all other questions in that are part of question 1.B sounded good challage to move further upon.
 
-![alt text](image-3.png)
+![alt text](Img/image-3.png)
 
 Question 3.B seems like simular challange to 1.B but looked an little different. Thats why i wanted to work on it.
 
-![alt text](image-4.png)
+![alt text](Img/image-4.png)
 
 Question 4.C has an multiple choice input that i want to recreate as perfect as possible.
 
-![alt text](image-5.png)
+![alt text](Img/image-5.png)
 
 Question 4.D has most challanging form input for me at the moment. Since it has an fracture and percantile. I want it to respond to each other if one has input.
 
 During the day i also made the website multiple pages and fixed bugs with this issue.
+
+### Wednesday march 12
+

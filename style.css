@@ -158,7 +158,10 @@ fieldset{
 
     & > section{
         margin-bottom: 20px;
+        margin-left: 0;
     }
+
+    margin-left: 3rem;
 }
 
 html:has([value="checkes"]:not(:checked)) .invisable{

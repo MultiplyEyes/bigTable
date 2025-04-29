@@ -9,20 +9,29 @@
 </head>
 <body>
     <form>
+        <h1>Belasting Form</h1>
+        <h2>Gegevens van de overledene</h2>
+
+        <!-- 1 A -->
+        <!--  -->
+        <!--  -->
         <fieldset>
-            <legend>Vul hier de gegevens in van de overledene</legend>
+            <legend>1 A</legend>
             <p>
                 <label>Voorletter(s)*</label>
-                <input type="text" required> 
+                <input type="text" pattern="[^0-9]+" required> 
             </p>
+
             <p>
                 <label>Tussen-voegsel(s)</label>
-                <input type="text">
+                <input type="text" pattern="[^0-9]+">
             </p>
+
             <p>
                 <label>Achternaam*</label>
-                <input type="text" required>
+                <input type="text" pattern="[^0-9]+" required>
             </p>
+
             <p>
                 <label>Burgerservicenummer overledene*</label>
                 <input type="text" pattern="[1-9][0-9]{8}" required>
@@ -31,8 +40,152 @@
             <p>
                 <label>Overlijdensdatum*</label>
                 <input type="date" required>
-            </p> 
+            </p>
         </fieldset>
+        
+        <!-- 1 B -->
+        <!--  -->
+        <!--  -->
+        <fieldset>
+            <!-- Je moet opties verschijnen en verdwijnen -->
+            <legend>1 B</legend>
+            <p>
+                <label>Was de overledene getrouwd of had de overledene een geregistreerd partner op het moment van overlijden?*</label>
+                <p>
+                    <input type="radio" name="1B.1" required>
+                    <label> Nee. Ga verder met vraag 1c</label>
+                </p>
+                <p>
+                    <input type="radio" name="1B.1" value="oneB1nee" required>
+                    <label> ja</label>
+                </p>
+            </p>
+
+            <p class="one2B">
+                <label>Hadden de overledene en dienst echtgenoot of geregisteerd partner huwelijkse of partnerschapsvoorwaardn later vastleggen in een notariele akte?*</label>
+                <p class="one2B">
+                    <input type="radio" name="1B.2">
+                    <label> Nee</label>
+                </p>
+                <p class="one2B">
+                    <input type="radio" name="1B.2">
+                    <label> Ja. Stuur een kopie van de akte mee met de angifte*</label>
+                </p>
+            </p>
+
+            <p class="oneB3">
+                <label>Hadden de overledene en dienst partner een finaal verrekenbeding?*</label>
+                <p class="oneB3">
+                    <input type="radio" name="1B.3">
+                    <label> Nee</label>
+                </p>
+                <p class="oneB3">
+                    <input type="radio" name="1B.3">
+                    <label> Ja</label>
+                </p>
+            </p>
+
+            <p class="oneB4">
+                <label>Datum huwelijkse of partnerschapsvoorwaarden*</label>
+                <input type="date" required>
+            </p>
+        </fieldset>
+
+        <!-- 1 C -->
+        <!--  -->
+        <!--  -->
+        <fieldset>
+            <!-- Je moet opties verschijnen en verdwijnen -->
+            <legend>1 C</legend>
+            <p>
+                <label>Had de overledene kinderen?*</label>
+                <p>
+                    <input type="radio" name="1C.1" required>
+                    <label> Nee. Ga verder met vraag 1d.</label>
+                </p>
+                <p>
+                    <input type="radio" name="1C.1" value="twoB1nee" required>
+                    <label> Ja</label>
+                </p>
+            </p>
+
+            <p class="two3B">
+                <label>Is 1 van deze kinderen eerder overleden dan de overledene voor wie u nu aangifte doet?*</label>
+                <p class="two3B">
+                    <input type="radio" name="1C.2" >
+                    <label> Nee. Ga verder met vraag 1d.</label>
+                </p>
+                <p class="two3B">
+                    <input type="radio" name="1C.2" value="twoB2nee">
+                    <label> Ja</label>
+                </p>
+            </p>
+
+            <p class="two4B">
+                <label>Had dit overleden kind zelf kinderen?*</label>
+                <p class="two4B">
+                    <input type="radio" name="1C.3">
+                    <label> Nee</label>
+                </p>
+                <p class="two4B">
+                    <input type="radio" name="1C.3">
+                    <label> Ja</label>
+                </p>
+            </p>
+
+        </fieldset>
+
+        <!-- 1 B -->
+        <!--  -->
+        <!--  -->
+        <fieldset>
+            <!-- Je moet opties verschijnen en verdwijnen -->
+            <legend>1 D</legend>
+            <p>
+                <label>Had de overledene een testament?*</label>
+                <p>
+                    <input type="radio" name="1D.1"required>
+                    <label> Nee. Ga verder met vraag 2.</label>
+                </p>
+                <p>
+                    <input type="radio" name="1D.1" value="one4ja" required>
+                    <label> Ja. Vul de gegevens in van de notaris die het testament heeft opgemaakt en de
+                        datum van het testament.</label>
+                </p>
+            </p>
+
+            <p class="four">
+                <label>Protocolnummer notaris*</label>
+                <input type="text"> 
+            </p>
+
+            <p class="four">
+                <label>Voorletter(s)*</label>
+                <input type="text" pattern="[^0-9]+"> 
+            </p class="four">
+
+            <p class="four">
+                <label>Tussen-voegsel(s)</label>
+                <input type="text" pattern="[^0-9]+">
+            </p>
+
+            <p class="four">
+                <label>Achternaam*</label>
+                <input type="text" pattern="[^0-9]+">
+            </p>
+
+            <p class="four">
+                <label>Vestigingsplaats*</label>
+                <input type="text">
+            </p>
+
+            <p class="four">
+                <label>Datum van het testament of van de laatste wijziging*</label>
+                <input type="date">
+            </p>
+
+        </fieldset>
+
     </form>
 </body>
 </html>

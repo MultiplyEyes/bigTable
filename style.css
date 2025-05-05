@@ -14,12 +14,34 @@
     font-family: sans-serif;
 }
 
+
 body{
     background-color: var(--NS--BG);
+    margin: 0;
+    padding: 0;
 }
 
-p, legend{
+header{
+    height: 7.5625rem;
+    width: 100%;
+
+    background-color: var(--white);
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 .125rem 0 0 rgba(7, 7, 33, .15);
+}
+
+p, legend, h1, h2{
     color: var(--NS-Text);
+}
+
+p{
+    font-style: italic;
 }
 
 p:has(input[type="text"]), p:has(input[type="date"]), p:has(input[type="numbers"]){
@@ -159,6 +181,33 @@ input[type="text"]:valid, input[type="number"]:valid, input[type="date"]:valid, 
   
 input[type="text"]:invalid, input[type="number"]:invalid, input[type="date"]:invalid, input[type="number"]:invalid {
     border-color:  red;
+}
+
+input[type="submit"]{
+    background-color: var(--NS-Button);
+    border: none;
+    border-radius: 4px;
+    box-shadow: inset 0 -.125rem 0 var(--NS-Button);
+    color: var(--white);
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5625rem;
+    min-width: 7.5rem;
+    padding: .625rem 1.125rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .15sease-in-out;
+    white-space: nowrap;
+
+    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: 3rem;
+}
+
+input[type="submit"]:hover{
+    background-color: #004BA0;
 }
 
 html:has([value="oneB1nee"]:not(:checked)) .one2B, html:has([value="oneB1nee"]:not(:checked)) .oneB3, html:has([value="oneB1nee"]:not(:checked)) .oneB4 {

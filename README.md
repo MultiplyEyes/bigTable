@@ -96,3 +96,63 @@ And changed the design of the entire website to make it look more like the NS we
 ![alt text](image-2.png)
 
 This is the final design of the website.
+
+### Retake
+
+So I had to retake this project.
+
+Their is mainly 4 things I needed to change.
+
+- Veel te weinig validatie
+- Je HTML is echt niet goed genoeg
+- Uitklappen is nog te simpel, er gebeurt meer dan alleen uitklappen
+- Geef de formuliervelden context, nu staan er willekeurige woorden, het is een belastingformulier.
+
+### html
+
+Eerst heb ik de HTML verbeterd. Dit was een hele klus. Ik heb de HTML helemaal opnieuw opgebouwd. En de CSS ook een beetje aangepast.
+
+Ik heb inspiratie genomen van deze website:
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
+
+Deze website heeft vooral alles georganiseerd met p's. Dit onderelkaar doen en alle css verwijderen zorgt ervoor dat de website veel beter georganiseerd is. En dat je het veel beter kan lezen.
+
+### Validatie
+Ik heb geleerd van Christian dat ik een pattern moet gebruiken voor de validatie. Dit is een regex die ik heb gebruikt:
+
+```html
+<input type="text" pattern="[1-9][0-9]{8}" required>
+```
+Dit zorgt ervoor dat je niet van alles mag typen.
+
+### Fomulieren
+
+Terwijl ik html heb aangepast heb ik ook de formulieer vraag 1 na gemaakt. En alles gekopieeerd
+
+### Uitklappen
+Met hulp van Christian heb ik de uitklap functie gemaakt. Dit word gedaan met CSS en met Christian zijn hulp met JS. Dit zorgt ervoor dat de uitklap functie ook de required aanpast. voorbeeld:
+
+```javascript
+function RequiredOnnOff(inputNames, shouldRequire) {
+    inputNames.forEach((name) => {
+      var inputElement = document.getElementsByName(name);
+      if (shouldRequire) {
+        inputElement.forEach((input) => input.setAttribute("required", "true"));
+      } else {
+        inputElement.forEach((input) => input.removeAttribute("required"));
+      }
+    });
+}
+
+document.getElementById("oneB1ja").addEventListener("change", function () {
+    RequiredOnnOff(["1B.2", "1B.3", "1B.4"], true);
+});
+
+document.getElementById("oneB1nee").addEventListener("change", function () {
+    RequiredOnnOff(["1B.2", "1B.3", "1B.4"], false);
+});
+```
+
+### einde
+
+Ik heb de website verbeterd. Ik hoop dat ik nu meer kan laten zien aan Vasilis

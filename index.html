@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script type="module" src="main.js"></script>
+
     <title>NS form</title>
 </head>
 <body>
@@ -46,7 +47,7 @@
 
             <p>
                 <label>Overlijdensdatum*</label>
-                <input type="date" required>
+                <input type="date" id="myDate" required >
             </p>
         </fieldset>
         
@@ -59,11 +60,11 @@
             <p>
                 <label>Was de overledene getrouwd of had de overledene een geregistreerd partner op het moment van overlijden?*</label>
                 <p>
-                    <input type="radio" name="1B.1" required>
+                    <input type="radio" name="1B.1" id="oneB1nee"required>
                     <label> Nee. Ga verder met vraag 1c</label>
                 </p>
                 <p>
-                    <input type="radio" name="1B.1" value="oneB1nee" required>
+                    <input type="radio" name="1B.1" value="oneB1nee" id="oneB1ja" required>
                     <label> ja</label>
                 </p>
             </p>
@@ -71,12 +72,13 @@
             <p class="one2B">
                 <label>Hadden de overledene en dienst echtgenoot of geregisteerd partner huwelijkse of partnerschapsvoorwaardn later vastleggen in een notariele akte?*</label>
                 <p class="one2B">
-                    <input type="radio" name="1B.2">
+                    <input type="radio" name="1B.2" id="oneB1nee_1">
                     <label> Nee</label>
                 </p>
                 <p class="one2B">
                     <input type="radio" name="1B.2">
                     <label> Ja. Stuur een kopie van de akte mee met de angifte*</label>
+                    <input type="file" accept=".pdf, .doc, .docx, .txt">
                 </p>
             </p>
 
@@ -94,7 +96,7 @@
 
             <p class="oneB4">
                 <label>Datum huwelijkse of partnerschapsvoorwaarden*</label>
-                <input type="date" required>
+                <input type="date" name="1B.4" id="myDate" required>
             </p>
         </fieldset>
 
@@ -107,11 +109,11 @@
             <p>
                 <label>Had de overledene kinderen?*</label>
                 <p>
-                    <input type="radio" name="1C.1" required>
+                    <input type="radio" name="1C.1" id="twoUnonee" required>
                     <label> Nee. Ga verder met vraag 1d.</label>
                 </p>
                 <p>
-                    <input type="radio" name="1C.1" value="twoB1nee" required>
+                    <input type="radio" name="1C.1" value="twoB1nee" id="twoUnoja" required>
                     <label> Ja</label>
                 </p>
             </p>
@@ -119,11 +121,11 @@
             <p class="two3B">
                 <label>Is 1 van deze kinderen eerder overleden dan de overledene voor wie u nu aangifte doet?*</label>
                 <p class="two3B">
-                    <input type="radio" name="1C.2" >
+                    <input type="radio" name="1C.2" id="twoB3nee" required>
                     <label> Nee. Ga verder met vraag 1d.</label>
                 </p>
                 <p class="two3B">
-                    <input type="radio" name="1C.2" value="twoB2nee">
+                    <input type="radio" name="1C.2" value="twoB2nee" id="twoB3ja">
                     <label> Ja</label>
                 </p>
             </p>
@@ -151,11 +153,11 @@
             <p>
                 <label>Had de overledene een testament?*</label>
                 <p>
-                    <input type="radio" name="1D.1"required>
+                    <input type="radio" name="1D.1"required id="wownee">
                     <label> Nee. Ga verder met vraag 2.</label>
                 </p>
                 <p>
-                    <input type="radio" name="1D.1" value="one4ja" required>
+                    <input type="radio" name="1D.1" value="one4ja" id="wowja">
                     <label> Ja. Vul de gegevens in van de notaris die het testament heeft opgemaakt en de
                         datum van het testament.</label>
                 </p>
@@ -163,12 +165,12 @@
 
             <p class="four">
                 <label>Protocolnummer notaris*</label>
-                <input type="number"> 
+                <input type="number" name="1D.2"> 
             </p>
 
             <p class="four">
                 <label>Voorletter(s)*</label>
-                <input type="text" pattern="[^0-9]+"> 
+                <input type="text" pattern="[^0-9]+" name="1D.2"> 
             </p class="four">
 
             <p class="four">
@@ -178,17 +180,17 @@
 
             <p class="four">
                 <label>Achternaam*</label>
-                <input type="text" pattern="[^0-9]+">
+                <input type="text" pattern="[^0-9]+" name="1D.2">
             </p>
 
             <p class="four">
                 <label>Vestigingsplaats*</label>
-                <input type="text">
+                <input type="text" name="1D.2">
             </p>
 
             <p class="four">
                 <label>Datum van het testament of van de laatste wijziging*</label>
-                <input type="date">
+                <input type="date" id="myDate" name="1D.2">
             </p>
 
         </fieldset>
